@@ -27,15 +27,17 @@ function AllBeersPage() {
 
     {allBeers.map(beer =>{
         return(
-            <div key= {beer._id } >
-           <Link to={`/beers/${beer._id}`} > 
-            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX1qg_ubZSaiosxLvS2rmQhXBru35Cp_kRmA&s'  />
-            <h2>{beer.name}</h2>
+            <div key= {beer._id }  >
+            <Link to={`/beers/${beer._id}`} > 
+                    
+                            <img src={beer.image_url}  />
+                            <h2>{beer.name}</h2>
+                           
+                            <p>{beer.tagline}</p>
+                           
+                            <p>Created by: {beer.contributed_by}</p>
+
             </Link> 
-            <br/>
-            <p>{beer.tagline}</p>
-            <br/>
-            <p><b>{beer.contributed_by}</b></p>
 
             </div>
         )

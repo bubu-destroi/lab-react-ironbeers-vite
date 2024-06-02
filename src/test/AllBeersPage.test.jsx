@@ -64,11 +64,11 @@ describe("Iteration 4", () => {
 
       expect(img1).toBeInTheDocument();
       expect(img2).toBeInTheDocument();
-      expect(screen.getByText("Tagline 1")).toBeInTheDocument();
-      expect(screen.getByText("Created by: Contributor 1")).toBeInTheDocument();
+       expect(screen.getByText("Tagline 1")).toBeInTheDocument();
+       expect(screen.getByText("Created by: Contributor 1")).toBeInTheDocument();
 
-      expect(screen.getByText("Tagline 2")).toBeInTheDocument();
-      expect(screen.getByText("Created by: Contributor 2")).toBeInTheDocument();
+       expect(screen.getByText("Tagline 2")).toBeInTheDocument();
+       expect(screen.getByText("Created by: Contributor 2")).toBeInTheDocument();
     });
 
     test("renders a link to Beer Details Page for each beer", async () => {

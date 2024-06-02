@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
+import axios from "axios";
 
 function BeerDetailsPage() {
 
     const [beer, setBeer] = useState(null)
-    const navigate = useNavigate()
     const {beerId} = useParams()
 
     const getSingleBeer = async id => {
@@ -27,11 +27,11 @@ function BeerDetailsPage() {
         {!beer && <h3>No beer was found</h3>}
         {beer && (
             <div >
-                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX1qg_ubZSaiosxLvS2rmQhXBru35Cp_kRmA&s'  />
+                <img src={beer.image_url} />
                 <h1>{beer.name}</h1>
                 <h3>{beer.tagline}</h3>
                 <p>{beer.first_brewed}</p>
-                <p>{beer.atenuation_level}</p>
+                <p>{beer.attenuation_level}</p>
                 <h3>{beer.description}</h3>
                 <h5>{beer.contributed_by}</h5>
 
